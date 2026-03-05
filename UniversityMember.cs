@@ -1,4 +1,7 @@
-﻿public class UniversityMember
+﻿using System;
+using System.Collections.Generic;
+
+public class UniversityMember
 {
     private string _name;
 
@@ -14,6 +17,7 @@
     }
 
     public string MemberId { get; }
+    public int ActionCount => ActionLog.Count;
     protected List<string> ActionLog = new List<string>();
 
     public UniversityMember(string name, string memberId)
